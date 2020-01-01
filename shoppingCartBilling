@@ -1,3 +1,11 @@
+#findLowestPrice([['100','sale','january-sale','big'],['200','sale','EMPTY','big']],
+[['sale','0','10'],['january-sale','1','10'],['big','2','50']])#input format
+#products include price and discount tags (discount can be infinite)
+#discounts include information like name of tag its type(0,1 or 2) and amount.
+#type0 tag new price=amount
+#type1 tag new price=price*(100-amount)/100
+#type3 tag new price=price-amount
+#this algorithm below is bad (sorry),it works but takes alot of time.
 def findLowestPrice(products, discounts):
     final=[]
     finallast=[]
