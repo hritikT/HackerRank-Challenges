@@ -16,8 +16,11 @@ def findLowestPrice(products, discounts):
         for j in range(1,len(products[i])):
             if (products[i][j] != "EMPTY"):
                 a.append(products[i][j])
+        if (len(a)==0):
+            finallast.append(price)
+        else:
                 
-        for j in range(0,len(a)):
+          for j in range(0,len(a)):
             for k in range(0,len(discounts)):
                 if (a[j] in discounts[k]):
                     type1=int(discounts[k][1])
@@ -37,9 +40,9 @@ def findLowestPrice(products, discounts):
                     
             final.sort()
             
-        finallast.append(final[0])
-        print('finallast',finallast)
-        final=[]
+          finallast.append(final[0])
+          
+          final=[]
     
     sum=0
     for i in range(0,len(finallast)):
